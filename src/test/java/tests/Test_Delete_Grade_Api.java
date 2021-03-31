@@ -18,7 +18,7 @@ public class Test_Delete_Grade_Api extends BaseTest {
     @Issue("bug-tracker#1")
     public void Valid_Delete_exist_Grade() {
 
-       Response delete_response = gradecollection.delete_grade(Token , "7");
+       Response delete_response = gradecollection.delete_grade(Token , "8");
 
     }
 }

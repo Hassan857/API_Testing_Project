@@ -1,0 +1,9 @@
+[ReportManager] Successfully loaded the following test data file [E:\Intellj Projects\Rest_Assured_Demo/src/test/resources/TestDataFiles/DataFile.xlsx]. @31-03-2021 15:05:23.0266 PM
+[ReportManager] Successfully created attachment [Test Data - Excel] @31-03-2021 15:05:23.0281 PM
+[ReportManager] Response status code: [200], status line: [HTTP/1.1 200 OK] @31-03-2021 15:05:27.0247 PM
+[ReportManager] Evaluating the actual response status code against the expected one...... @31-03-2021 15:05:27.0261 PM
+[ReportManager] AssertEquals PASSED; Expected [200] and Actual [200]. Comparison Type [EQUALS]. Validation Type [POSITIVE]. @31-03-2021 15:05:27.0270 PM
+[ReportManager] API Action [performRequest] successfully performed. With the following test data [Request Type: "POST" | Target Status Code: "200" | Service URL: "https://backend.shifters.tech/api/login" | Content Type: "application/json" | Response Time: "2736ms"]. @31-03-2021 15:05:28.0802 PM
+[ReportManager] Successfully created attachment [API Request - JSON Body] @31-03-2021 15:05:28.0802 PM
+[ReportManager] Successfully created attachment [API Response - JSON Body] @31-03-2021 15:05:28.0802 PM
+[ReportManager] API Action [getResponseJSONValue] successfully performed. With the following test data [data.access_token]. @31-03-2021 15:05:28.0849 PM

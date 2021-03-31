@@ -7,7 +7,7 @@ import org.json.simple.JSONObject;
 
 public class Login {
 
-    private String baseURI = "https://backend.shifters.tech/api";
+    public String baseURI = "https://backend.shifters.tech/api";
     RestActions apiObj = new RestActions(baseURI);
     private String login_endpoint = "/login";
     public String token ;

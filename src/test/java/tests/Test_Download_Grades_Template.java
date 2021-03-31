@@ -3,8 +3,12 @@ package tests;
 import apis.Grades_Collection;
 import io.qameta.allure.*;
 import io.restassured.response.Response;
+import org.apache.commons.compress.utils.IOUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.io.*;
+import java.nio.file.Files;
 
 public class Test_Download_Grades_Template extends BaseTest{
 
@@ -18,10 +22,14 @@ public class Test_Download_Grades_Template extends BaseTest{
     @Severity(SeverityLevel.CRITICAL)
     @TmsLink("focus-case-1637098")
     @Issue("bug-tracker#1")
-    public void Valid_Downlaod_Grades_Temp()  {
+    public void Valid_Downlaod_Grades_Temp() throws IOException {
 
         Response grade_downlaod_response =  gradecollection.get_grade_template(Token);
-        Assert.assertTrue(grade_downlaod_response.getBody().asString().contains("name"),
-                "The  response body doesn't contain the expected message: " + "name");
+        //InputStream inputstraem = grade_downlaod_response.asInputStream();
+
+
+      //  File file = new File(System.getProperty("user.dir")+"/downloads/myfile.xlsx");
+      //  OutputStream outStream = new FileOutputStream(file);
+       // outStream.write(inputstraem);
     }
 }

@@ -27,5 +27,7 @@ public class Test_Update_Grade_Api extends BaseTest{
 
         Response update_response = gradecollection.edit_grade(newgradename , newshortname , Token , "6");
         Assertions.assertTrue(update_response.getBody().asString().contains(newgradename));
+        Assert.assertEquals(update_response.getBody().jsonPath().get("data.grade_name") , newgradename);
+
     }
 }

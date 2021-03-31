@@ -1,7 +1,10 @@
 package tests;
 
 import apis.Grades_Collection;
+import com.shaft.validation.Assertions;
 import io.qameta.allure.*;
+import io.restassured.RestAssured;
+import io.restassured.internal.common.assertion.Assertion;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -24,8 +27,7 @@ public class Test_Create_Grade_Api extends BaseTest {
         gradename = filereader.getCellData("grade_name");
         shortname = filereader.getCellData("short_name");
        Response grade_response =  gradecollection.create_grade(gradename , shortname , Token);
-        Assert.assertTrue(grade_response.getBody().asString().contains("id"),
-                "The  response body doesn't contain the expected message: " + "id");
+        Assert.assertEquals(grade_response.getBody().jsonPath().get("data.grade_name") , gradename);
     }
     @Test(description = "INValid Grade Creation")
     @Description("When I enter long short name in the short Name field then grade should not be created")
